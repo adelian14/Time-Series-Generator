@@ -160,13 +160,13 @@ app.layout = html.Div( children = [dbc.Container([
             html.Div([
                 html.H3(["Main Controls"], className = "text-center mb-3"), 
                 
-                dbc.Label("Base Trend Value (numeric growth)"),
+                dbc.Label("Base Trend Value"),
                 dbc.Input(id='trend-input', type='number', value=150, className = "mb-2"),
 
-                dbc.Label("Seasonality Magnitude (e.g. 500 or 0.1 for relative)"),
+                dbc.Label("Seasonality Magnitude"),
                 dbc.Input(id='seasonality-input', type='number', value=1000, className = "mb-2"),
 
-                dbc.Label("Noise Range (+/- amount of randomness)"),
+                dbc.Label("Noise Range"),
                 dbc.Input(id='noise-input', type='number', value=500, className = "mb-2"),
 
                 dbc.Label("Seasonality Cycle (e.g. 12 for monthly)"),
@@ -180,10 +180,10 @@ app.layout = html.Div( children = [dbc.Container([
         dbc.Col([ #More Customization
             html.Div([
                 html.H3(["More Customization"], className = "text-center mb-3"), 
-                dbc.Label("Start Date of Series (YYYY-MM-DD)"),
+                dbc.Label("Start Date of Series"),
                 dcc.DatePickerSingle(id='start-date', date='2000-01-01', style={'display': 'block'}, className = "mb-2"),
 
-                dbc.Label("Date Interval (D, M, Y)"),
+                dbc.Label("Date Interval"),
                 dcc.Dropdown(id='date-interval', options=[
                     {'label': 'Daily', 'value': 'D'},
                     {'label': 'Monthly', 'value': 'ME'},
@@ -415,4 +415,4 @@ def generate_series(n_clicks, toggles, param_values, trend, seasonality, noise, 
     return fig, description, "", ""
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=8000) # Replace this line with app.run(debug=True) when running locally
