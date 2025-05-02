@@ -1,0 +1,53 @@
+body{
+    background-color: #f0f2f5;
+    padding: 50px 10px;
+}
+
+.custom-checklist input[type="checkbox"] {
+    background-color: #d2d2d2;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+.custom-checklist input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.accordion-button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+.accordion-button {
+    border: none !important;
+    outline: none !important;
+    background-color: #f6f6f6;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #4B9ED7; /* light blue background */
+    color: #fff;               /* keep text black */
+}
+
+.bi {
+    font-size: 1.3rem;
+    vertical-align: middle;
+    color: #707070
+}
+
+a:hover .bi {
+    color: #0d6efd; /* Bootstrap primary blue on hover */
+}
+  
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
