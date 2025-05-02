@@ -415,4 +415,4 @@ def generate_series(n_clicks, toggles, param_values, trend, seasonality, noise, 
     return fig, description, "", ""
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000)
