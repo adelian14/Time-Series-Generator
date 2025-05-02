@@ -90,7 +90,6 @@ external_stylesheets = [
 ]
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, title="Time Series Generator")
-server = app.server
 
 #App layout
 app.layout = html.Div( children = [dbc.Container([
@@ -416,4 +415,4 @@ def generate_series(n_clicks, toggles, param_values, trend, seasonality, noise, 
     return fig, description, "", ""
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='0.0.0.0', port=8000)
